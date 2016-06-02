@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: ''
+title: Untitled
 ---
 ## d
 <h1>EULER ANGLE TO CARTESIAN COORDINATES</h1>
@@ -40,7 +40,7 @@ title: ''
 </table>
 Visual Example of yaw, pitch and roll from wikipedia user <a title="User:Auawise" href="https://commons.wikimedia.org/wiki/User:Auawise">Auawise</a>
 
-<img src="{{ site.baseurl }}/img/yaw_axis_corrected-svg.png" />
+<img src="{{ site.baseurl }}/img/yaw_axis_corrected.svg" />
 
 
 It may be more convenient mathematically to use Cartesian coordinates. In order to do this, simply apply the rotation matrices. If you have forgotten your linear algebra here they are below:
@@ -54,6 +54,56 @@ The final rotation being
 &nbsp;
 
 &nbsp;
+<script>
+$(document).ready(function() {
+    $("#calcBtn").click(function(){
+    theta = parseFloat($("#yaw").val()) * Math.PI/180;
+    psi = parseFloat($("#roll").val()) * Math.PI/180;
+    phi = parseFloat($("#pitch").val()) * Math.PI/180;
+    $("#a11").text(String((Math.cos(theta)*Math.cos(phi)).toFixed(3)));
+    $("#a12").text(
+    String((Math.sin(psi)*Math.sin(theta)*Math.cos(phi) - Math.cos(psi)*Math.sin(phi)).toFixed(3)));
+    $("#a13").text(
+    String((Math.cos(psi)*Math.sin(theta)*Math.cos(phi) + Math.sin(psi)*Math.sin(phi)).toFixed(3)));
+    $("#a21").text(
+    String((Math.cos(theta)*Math.sin(phi)).toFixed(3)));
+    $("#a22").text(
+    String((Math.sin(psi)*Math.sin(theta)*Math.sin(phi) + Math.cos(psi)*Math.cos(phi)).toFixed(3)))
+    $("#a23").text(
+    String((Math.cos(psi)*Math.sin(theta)*Math.sin(phi) - Math.sin(psi)*Math.cos(phi)).toFixed(3)))
+    $("#a31").text(
+    String((-1*Math.sin(theta)).toFixed(3)));
+    $("#a32").text(
+    String((Math.sin(psi)*Math.cos(theta)).toFixed(3)));
+    $("#a33").text(
+    String((Math.cos(psi)*Math.cos(theta)).toFixed(3)));
+    }); 
+});
+</script>
+<center>
+  <label for="roll">Roll:</label>
+  <input type="text" id="roll" name="roll" value="0">
+  <label for="pitch">Pitch:</label>
+  <input type="text" id="pitch" name="pitch" value="0">
+
+  <label for="yaw">Yaw:</label>
+  <input type="text" id="yaw" name="yaw" value="0">
+  <input type="button" id="calcBtn" value="CALCULATE CARTESIAN" >
+  <br>
+  <br>
+  <label id="a11">1.000</label>
+  <label id="a12">0.000</label>
+  <label id="a13">0.000</label>
+  <br>
+  <label id="a21">0.000</label>
+  <label id="a22">1.000</label>
+  <label id="a23">0.000</label>
+  <br>
+  <label id="a31">0.000</label>
+  <label id="a32">0.000</label>
+  <label id="a33">1.000</label>
+</center>
+
 
 http://www.staff.city.ac.uk/~sbbh653/publications/euler.pdf
 
