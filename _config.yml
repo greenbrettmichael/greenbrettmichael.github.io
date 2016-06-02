@@ -44,7 +44,7 @@ author:
   facebook: greenbrettmichael  # eg. daattali
   github: greenbrettmichael    # eg. daattali
   #twitter: yourname   # eg. daattali
-  linkedin: greenbrettmichael  # eg. "pub/dean-attali/8/946/143"
+  linkedin: in/greenbrettmichael  # eg. "pub/dean-attali/8/946/143"
   stackoverflow: 8144484/brett-michael-green  # eg. "3943160/daattali"
  
 # Select which links to show in the footer
@@ -67,7 +67,7 @@ footer-links-active:
 disqus: "greenbrettmichaelgithubio"
 
 # Fill in your Google Analytics ID to track your website using GA
-#google_analytics: ""
+google_analytics: "UA-78710207-1"
 
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
