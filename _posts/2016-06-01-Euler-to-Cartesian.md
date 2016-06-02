@@ -39,7 +39,7 @@ title: EULER ANGLE TO CARTESIAN COORDINATES
 </table>
 Visual Example of yaw, pitch and roll from wikipedia user <a title="User:Auawise" href="https://commons.wikimedia.org/wiki/User:Auawise">Auawise</a>
 
-<img src="{{ site.baseurl }}/img/yaw_axis_corrected.svg" />
+<img src="{{ site.baseurl }}/img/Yaw_Axis_Corrected.svg" />
 
 
 It may be more convenient mathematically to use Cartesian coordinates. In order to do this, simply apply the rotation matrices. If you have forgotten your linear algebra here they are below:
@@ -82,11 +82,13 @@ $(document).ready(function() {
 <center>
   <label for="roll">Roll:</label>
   <input type="text" id="roll" name="roll" value="0">
+  <br>
   <label for="pitch">Pitch:</label>
   <input type="text" id="pitch" name="pitch" value="0">
-
+  <br>
   <label for="yaw">Yaw:</label>
   <input type="text" id="yaw" name="yaw" value="0">
+  <br>
   <input type="button" id="calcBtn" value="CALCULATE CARTESIAN" >
   <br>
   <br>
@@ -103,6 +105,7 @@ $(document).ready(function() {
   <label id="a33">1.000</label>
 </center>
 
+<br>
 
 http://www.staff.city.ac.uk/~sbbh653/publications/euler.pdf
 
