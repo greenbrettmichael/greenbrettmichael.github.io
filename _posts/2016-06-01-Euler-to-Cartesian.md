@@ -53,6 +53,7 @@ The final rotation being
 &nbsp;
 
 &nbsp;
+<script src="{{ site.baseurl }}/js/jquery-1.11.2.min.js"></script>
 <script>
 $(document).ready(function() {
     $("#calcBtn").click(function(){
