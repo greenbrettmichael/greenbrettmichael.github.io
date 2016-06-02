@@ -39,7 +39,7 @@ title: EULER ANGLE TO CARTESIAN COORDINATES
 </table>
 Visual Example of yaw, pitch and roll from wikipedia user <a title="User:Auawise" href="https://commons.wikimedia.org/wiki/User:Auawise">Auawise</a>
 
-<img src="{{ site.baseurl }}/img/Yaw_Axis_Corrected.svg" />
+<img src="{{ site.baseurl }}/img/Yaw_Axis_Corrected.svg.png" />
 
 
 It may be more convenient mathematically to use Cartesian coordinates. In order to do this, simply apply the rotation matrices. If you have forgotten your linear algebra here they are below:
