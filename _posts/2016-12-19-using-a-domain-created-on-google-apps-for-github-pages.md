@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Using a Domain Created On Google Apps For Github Pages
 ---
     If you are reading this you have probably set up an individual account
