@@ -13,11 +13,13 @@ console) under Advanced DNS Settings. Select Sign in to DNS Console and
 use the credentials to access the Domain Services page.
     
   We will be focusing on the Host Records.
+  
   First modify the A records to point towards Github's servers instead of  Google's : 
   
   1. remove all records of record type A
   2. add entry with Host Name @, Address 192.30.252.154, record type A
   3. add entry with Host Name @, Address 192.30.252.153, record type A
+
 
   Second replace the CNAME entry to point towards your github pages address,
 edit the record with host name www, enter the address as **username.github.io.**
