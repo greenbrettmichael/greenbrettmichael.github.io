@@ -28,8 +28,7 @@ we targeted resolve the ip that hosts your github page.
 Leave any MX entries alone.
    
   Last create a CNAME file at the root of your github pages directory. It
-should be called CNAME exactly, the contents of this file will be      
-only **yourDomain.com**
+should be called CNAME exactly, the contents of this file will be only **yourDomain.com**
     
   The next step is to wait for the DNS timeout to finish so that the
 address points to the right place. If you are impatient (or this process
