@@ -1,5 +1,7 @@
 ---
-published: false
+layout: post
+published: true
+title: A Case for Password Managers
 ---
 ## What is a Password Manager
 Passwords were invented to limit access to users authenticated to use a system. Today the average business user maintains 191 services that require a password (1) while 59% of users polled by LastPass reported using the same password globally (2).  Password managers were built to solve this problem by choosing storing unique and strong passwords without requiring the passwords to be memorized. Modern password managers can be delivered over centralized cloud solutions that rely on a single strong password and portable installations that add the physical security of the device.
