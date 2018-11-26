@@ -108,9 +108,9 @@ $(document).ready(function() {
 
 <br>
 
-http://www.staff.city.ac.uk/~sbbh653/publications/euler.pdf
+https//www.staff.city.ac.uk/~sbbh653/publications/euler.pdf
 
-http://www.euclideanspace.com/maths/geometry/rotations/euler/
+https//www.euclideanspace.com/maths/geometry/rotations/euler/
 
 &nbsp;
 

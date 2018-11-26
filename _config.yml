@@ -4,11 +4,11 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (https://username.github.io) then use these settings:
-url: "http://greenbrettmichael.github.io"
+url: "https//greenbrettmichael.github.io"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
-#url: "http://username.github.io/projectname"
+#url: "https//username.github.io/projectname"
 #baseurl: "/projectname"
 
 # Of course don't forget to change the username and projectname to YOUR username and project
@@ -25,10 +25,10 @@ description: Personal Blog
 navbar-links:
   About Me: "about"
   #Resources:
-  #  - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-  #  - Learn markdown: "http://www.markdowntutorial.com/"
+  #  - Beautiful Jekyll: "https//deanattali.com/beautiful-jekyll/"
+  #  - Learn markdown: "https//www.markdowntutorial.com/"
   #  - GitHub Pages: "https://pages.github.com/"
-  #Author's home: "http://deanattali.com"
+  #Author's home: "https//deanattali.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
