@@ -3,7 +3,10 @@ layout: post
 published: true
 title: Using a Domain Created On Google Apps For Github Pages
 ---
-  If you are reading this you have probably set up an individual account
+11/25/18 Edit: The information on this post is now out of date, please refer to the github help page :[Github Apex Setup](https://help.github.com/articles/setting-up-an-apex-domain/)
+
+
+If you are reading this you have probably set up an individual account
 for email through Google Apps (G Suite). You will need to access the DNS
 record manager with your DNS Provider; if you bought the domain while
 setting up your G Suite account this is either Enom or GoDaddy. You will
