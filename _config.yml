@@ -92,15 +92,7 @@ share-links-active:
 # Fill in your Google Analytics gtag.js ID to track your website using gtag
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
 disqus: "greenbrettmichaelgithubio"
-gtag: "<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129809681-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-129809681-1');
-</script>"
+gtag: "UA-129809681-1"
 
 # Fill in your Google Analytics ID to track your website using GA
 google_analytics: "UA-129809681-1"
