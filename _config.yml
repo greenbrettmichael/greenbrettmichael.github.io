@@ -3,7 +3,7 @@
 # url is the full website URL
 # baseurl is the website's URL without the hostname
 
-# If you are building a simple GitHub user page (http://username.github.io) then use these settings:
+# If you are building a simple GitHub user page (https://username.github.io) then use these settings:
 url: "http://greenbrettmichael.github.io"
 baseurl: ""
 
@@ -34,6 +34,31 @@ navbar-links:
 # Remove this parameter if you don't want an image in the navbar
 avatar: "/img/avatar-icon.png"
 
+# If you want to have an image logo in the top-left corner instead of the title text,
+# then specify the following parameter
+# title-img: /path/to/image
+
+# --- Background colour/image options --- #
+
+# Personalize the colors in your website. Colour values can be any valid CSS colour
+
+navbar-col: "#F5F5F5"
+navbar-text-col: "#404040"
+navbar-children-col: "#F5F5F5"
+page-col: "#FFFFFF"
+link-col: "#008AFF"
+hover-col: "#0085A1"
+footer-col: "#F5F5F5"
+footer-text-col: "#777777"
+footer-link-col: "#404040"
+
+# Alternatively, the navbar, footer, and page background can be set to use background images
+# instead of colour
+
+# navbar-img: "/img/bgimage.png"
+# footer-img: "/img/bgimage.png"
+# page-img: "/img/bgimage.png"
+
 # --- Footer options --- #
 
 # Change all these values or delete the ones you don't want.
@@ -46,28 +71,63 @@ author:
   #twitter: yourname   # eg. daattali
   linkedin: in/greenbrettmichael  # eg. "pub/dean-attali/8/946/143"
   stackoverflow: 8144484/brett-michael-green  # eg. "3943160/daattali"
- 
-# Select which links to show in the footer
-footer-links-active:
+
+# Select your active Social Network Links.
+# Uncomment the links you want to show in the footer and add your information to each link.
   rss: true
-  facebook: true
-  email: true
+# If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
+social-network-links:
   twitter: false
-  github: true
+  facebook: true
   linkedin: true
-  stackoverflow: false
+  linkedin: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
 #url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
 
-# --- Misc --- #
+# --- Web Statistics Section --- #
 
+# Fill in your Google Analytics gtag.js ID to track your website using gtag
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
 disqus: "greenbrettmichaelgithubio"
+#gtag: ""
 
 # Fill in your Google Analytics ID to track your website using GA
 google_analytics: "UA-78710207-1"
+
+# Google Tag Manager ID
+#gtm: ""
+
+# Matomo (aka Piwik) Web statistics
+# Uncomment the following section to enable Matomo. The opt-out parameter controls
+# whether or not you want to allow users to opt out of tracking.
+
+#matomo:
+#  site_id: "9"
+#  uri: "demo.wiki.pro"
+#  opt-out: true
+
+# --- Comments --- #
+
+# Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
+# disqus: ""
+
+# To use Facebook Comments, fill in a Facebook App ID
+# fb_comment_id: ""
+
+# --- Misc --- #
+
+# Facebook App ID
+# fb_app_id: ""
+
+# Excerpt Word Length
+# Truncates the excerpt to the specified number of words on the index page
+excerpt_length: 50
+
+# Character used to separate site title and description in HTML document title
+# and RSS feed title
+title-separator: "-"
 
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
@@ -90,6 +150,7 @@ defaults:
     values:
       layout: "post"
       comments: true  # add comments to all blog posts
+      social-share: true # add social media sharing buttons to all blog posts
   -
     scope:
       path: "" # all files
@@ -97,13 +158,18 @@ defaults:
       layout: "page"
       show-avatar: true
 
+# Use tags index page and make tags on each post clickable
+link-tags: true
+
 # Exclude these files from production site
 exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Dockerfile
   - Gemfile
   - Gemfile.lock
   - LICENSE
   - README.md
-  - CNAME
   - Vagrantfile
 
 # prose.io config
@@ -145,13 +211,20 @@ prose:
           help: "Enter date of post."
           placeholder: "yyyy-mm-dd"
           alterable: true
+      - name: "image"
+        field:
+          element: "text"
+          label: "Image"
+          help: "Add a thumbnail image to your post."
+          placeholder: "Thumbnail"
+          alterable: true
       - name: "published"
         field:
           element: "checkbox"
           label: "Publish"
           help: "Check to publish post, uncheck to hide."
 
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
