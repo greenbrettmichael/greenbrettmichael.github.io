@@ -66,8 +66,7 @@ footer-link-col: "#404040"
 author:
   name: Brett-Michael Green
 
-social-network-links: 
- email: "personal@brettmichaelgreen.com"
+social-network-links:
   facebook: greenbrettmichael  # eg. daattali
   github: greenbrettmichael    # eg. daattali
   #twitter: yourname   # eg. daattali
