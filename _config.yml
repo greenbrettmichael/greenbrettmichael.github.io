@@ -65,7 +65,9 @@ footer-link-col: "#404040"
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
   name: Brett-Michael Green
-  email: "personal@brettmichaelgreen.com"
+
+social-network-links: 
+ email: "personal@brettmichaelgreen.com"
   facebook: greenbrettmichael  # eg. daattali
   github: greenbrettmichael    # eg. daattali
   #twitter: yourname   # eg. daattali
@@ -76,11 +78,11 @@ author:
 # Uncomment the links you want to show in the footer and add your information to each link.
   rss: true
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
-social-network-links:
+share-links-active:
   twitter: false
   facebook: true
   linkedin: true
-  linkedin: true
+  google: false
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
