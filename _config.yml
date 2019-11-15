@@ -67,15 +67,15 @@ author:
   name: Brett-Michael Green
 
 social-network-links:
-  facebook: greenbrettmichael  # eg. daattali
+  #facebook: greenbrettmichael  # eg. daattali
   github: greenbrettmichael    # eg. daattali
-  #twitter: yourname   # eg. daattali
+  twitter: yourname   # eg. daattali
   linkedin: greenbrettmichael  # eg. "pub/dean-attali/8/946/143"
   stackoverflow: 4481091/brettmichaelgreen  # eg. "3943160/daattali"
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
-  rss: true
+  #rss: true
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 share-links-active:
   twitter: false
