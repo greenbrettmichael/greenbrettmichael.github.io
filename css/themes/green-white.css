@@ -1,14 +1,30 @@
 /* Theme */
 
 main {
-	background: #43A047;
-	color: #FAFAFA;
+	background: #FAFAFA;
+	color: #43A047;
 }
 
 .icons-social a {
-	color: #FAFAFA;
+	color: #43A047;
 }
 
 .icons-social a svg path{
-	fill: #FAFAFA;
+	fill: #43A047;
 }
+
+a:link {
+	color: #43A047;
+  }
+  
+  a:visited {
+	color: #43A047;
+  }
+  
+  a:hover {
+	color: #43A047;
+  }
+  
+  a:active {
+	color: #43A047;
+  }
