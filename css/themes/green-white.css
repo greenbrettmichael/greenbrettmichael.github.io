@@ -13,18 +13,22 @@ main {
 	fill: #43A047;
 }
 
-a:link {
-	color: #43A047;
-  }
+.carousel-caption p {
+	color: #FAFAFA;
+}
+
+.carousel-caption a:link {
+	color: #FAFAFA;
+}
   
-  a:visited {
-	color: #43A047;
-  }
+.carousel-caption a:visited {
+	color: #FAFAFA;
+}
   
-  a:hover {
-	color: #43A047;
-  }
+carousel-caption a:hover {
+	color: #FAFAFA;
+}
   
-  a:active {
-	color: #43A047;
-  }
+carousel-caption a:active {
+	color: #FAFAFA;
+}
