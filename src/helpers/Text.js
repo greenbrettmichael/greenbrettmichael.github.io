@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import React, { useState, useMemo } from 'react'
-import fontFile from './sans'
+import fontFile from './NovaMono_Regular.js'
 
 export default function Text({ children, size = 1, letterSpacing = 0.01, color = '#000000', centerX = true, centerY = true, ...props }) {
   const [font] = useState(() => new THREE.FontLoader().parse(fontFile))
@@ -15,8 +15,13 @@ export default function Text({ children, size = 1, letterSpacing = 0.01, color =
         geom.computeBoundingBox()
         const mesh = new THREE.Mesh(geom, mat)
         mesh.position.x = x
-        x += geom.boundingBox.max.x + letterSpacing
-        y = Math.max(y, geom.boundingBox.max.y)
+        if(geom.vertices.length > 0) {
+          x += geom.boundingBox.max.x + letterSpacing
+          y = Math.max(y, geom.boundingBox.max.y)
+        }
+        else {
+          x += size
+        }
         return mesh
       }),
       [x, y]

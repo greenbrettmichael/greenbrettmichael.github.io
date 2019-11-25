@@ -17,10 +17,10 @@ const material = { transparent: true, roughness: 0.8, fog: true, shininess: 0, f
 const DemoBoard = ({ color = 'white', name, desc, ...props }) => {
   return (
     <group {...props}>
-      <Text centerX={false} color="lightcoral" size={0.6} position={[2.0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+      <Text centerX={false} color="lightcoral" size={0.6} position={[-3.0, 10, 4.0]} rotation={[-Math.PI / 2, 0, 0]}>
         {name}
       </Text>
-      <Text centerX={false} color="lightcoral" size={0.4} position={[2.0, 0.0, 1.0]} rotation={[-Math.PI / 2, 0, 0]}>
+      <Text centerX={false} color="lightcoral" size={0.4} position={[-3.0, 10.0, 5.0]} rotation={[-Math.PI / 2, 0, 0]}>
         {desc}
       </Text>
       <Billboard />
@@ -45,7 +45,7 @@ const App = () => {
         <Scene>
           
           <a.group position-z={y.to(y => (y / 500) * 25)}>
-            <DemoBoard color="white" name="WOWQUEUECAMPER" desc='Alarm_clock_using_OCR_(C++)' position={[0, -20, -6]}/>
+            <DemoBoard color="white" name="WOWQUEUECAMPER" desc='Alarm clock using OCR (C++)' position={[0, -20, -6]}/>
             <DemoBoard color="lightgray" name="2B" position={[0, 0, -32]} />
             <DemoBoard color="white" name="3A" position={[0, 0, -58]} />
             <DemoBoard color="lightgray" name="4B" position={[0, 0, -84]} />
