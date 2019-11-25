@@ -18,10 +18,6 @@ export default function Scene({ children, fallback = null }) {
         shadow-mapSize-height={2048}
       />
       <Suspense fallback={null}>{children}</Suspense>
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -10, 0]}>
-        <planeGeometry attach="geometry" args={[4, 1000]} />
-        <meshBasicMaterial attach="material" color="lightcoral" fog={false} transparent opacity={0.4} />
-      </mesh>
     </>
   )
 }
