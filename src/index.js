@@ -7,7 +7,6 @@ import { a } from '@react-spring/three'
 import { a as aDom } from '@react-spring/web'
 import Text from './helpers/Text'
 import Scene from './Scene'
-import useModel from './helpers/useModel'
 import Billboard from './3d/Billboard'
 import useYScroll from './helpers/useYScroll'
 import './helpers/uniforms'
@@ -16,7 +15,6 @@ import './styles.css'
 const material = { transparent: true, roughness: 0.8, fog: true, shininess: 0, flatShading: false }
 
 const DemoBoard = ({ color = 'white', name, desc, ...props }) => {
-  const [geometries, center] = useModel('/Billboard.glb')
   return (
     <group {...props}>
       <Text centerX={false} color="lightcoral" size={0.6} position={[2.0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]}>
