@@ -34,7 +34,7 @@ const Routes = () => {
     logPageView();
 
     return (
-        <Router > 
+        <Router basename={process.env.PUBLIC_URL}> 
             <Switch >               
                 { routes.map( route => <Route key={route.name} exact={route.exact} path={route.path} component={route.component} /> ) }
             </Switch>
