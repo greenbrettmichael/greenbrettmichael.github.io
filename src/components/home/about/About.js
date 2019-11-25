@@ -24,7 +24,7 @@ const About = () => {
                 <br/><span className="about-text-subtitle">I'm a software engineer!</span>
                 <br/><br/>My interests are graphics, vision, and concurrency. 
                 <br/>I love C++, mountains, dungeons, and dragons &#129497;
-                <br/><br/>If you want to know more: <a onClick={onLinkClick} href="https://docs.google.com/document/d/1fAmPU_8BsL2XIksU9V86YQ7ea3YRO7_Da1s5N555XIU/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><span className="about-cv">HERE is my CV.</span></a>
+                {/* TODO reformat resume for WORD <br/><br/>If you want to know more: <a onClick={onLinkClick} href="https://docs.google.com/document/" target="_blank" rel="noopener noreferrer"><span className="about-cv">HERE is my CV.</span></a> */}
                 <br/><br/>Keep scrolling to see some of the projects I've worked on.
             </div>                
         </div>
