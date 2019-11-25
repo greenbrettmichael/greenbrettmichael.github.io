@@ -1,31 +1,28 @@
 {
-  "name": "react-three-fiber-suspense-gltf-loader",
-  "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "main": "src/index.js",
+  "name": "brettmichaelgreen.com",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@react-spring/three": "9.0.0-beta.31",
-    "@react-spring/web": "9.0.0-beta.31",
-    "lodash": "4.17.15",
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "react-scripts": "3.0.1",
-    "react-spring": "8.0.27",
-    "react-three-fiber": "3.0.2",
-    "react-use-gesture": "5.2.4"
+    "all": "^0.0.0",
+    "immutable": "^3.8.1",
+    "install": "^0.10.1",
+    "npm": "^5.3.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-ga": "^2.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "react-transition-group": "^2.2.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "scroll-to-element": "^2.0.0",
+    "three": "^0.87.1"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  }
 }
