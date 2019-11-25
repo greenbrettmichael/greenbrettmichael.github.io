@@ -7,3 +7,6 @@ run `npm run test` to perform automated testing
 run `npm start` to test usability locally
 
 run `npm run deploy` to update github pages site
+
+## Acknolewdgement
+This code is forked from https://github.com/PierfrancescoSoffritti/pierfrancescosoffritti.com
