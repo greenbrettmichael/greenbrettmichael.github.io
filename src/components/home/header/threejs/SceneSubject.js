@@ -1,38 +1,62 @@
 import * as THREE from 'three'
-import alphaTexture from '../../../../assets/textures/stripes_gradient.jpg';
+import {NURBSSurface} from './NURBSSurface.js'
+import alphaTexture from '../../../../assets/textures/neon_gradient.png';
 
 export default scene => {    
     const group = new THREE.Group();
-
-    const subjectGeometry = deformGeometry(new THREE.IcosahedronGeometry(10, 2));
-    
+    const subjectGeometry = deformGeometry();
     const subjectMaterial = new THREE.MeshStandardMaterial({ color: "#000", transparent: true, side: THREE.DoubleSide, alphaTest: 0.5 });
     subjectMaterial.alphaMap = new THREE.TextureLoader().load(alphaTexture);
     subjectMaterial.alphaMap.magFilter = THREE.NearestFilter;
+    subjectMaterial.alphaMap.wrapS = THREE.RepeatWrapping;
     subjectMaterial.alphaMap.wrapT = THREE.RepeatWrapping;
+    subjectMaterial.alphaMap.repeat.x = 1;
     subjectMaterial.alphaMap.repeat.y = 1;
-
-    const subjectMesh = new THREE.Mesh(subjectGeometry, subjectMaterial);
-        
-    const subjectWireframe = new THREE.LineSegments(
-        new THREE.EdgesGeometry(subjectGeometry),
-        new THREE.LineBasicMaterial()
-    );
-
-    group.add(subjectMesh);
-    group.add(subjectWireframe);
+    var object = new THREE.Mesh( subjectGeometry, subjectMaterial );
+    group.add( object );
+   // group.add(subjectWireframe);
     scene.add(group);
 
     group.rotation.z = Math.PI/4;
 
-    const speed = 0.02;
-    const textureOffsetSpeed = 0.02;
+    const speed = 0.2;
+    const textureOffsetSpeed = 0.2;
 
-    function deformGeometry(geometry) {
-        for (let i=0; i<geometry.vertices.length; i+=2) {
-            const scalar = 1 + Math.random()*0.8;
-            geometry.vertices[i].multiplyScalar(scalar)
+    function deformGeometry() {
+        var nsControlPoints = [
+            [
+                new THREE.Vector4 ( -20, -20, 10, 10 ),
+                new THREE.Vector4 ( -20, -10, -20, 10 ),
+                new THREE.Vector4 ( -20, 10, 25, 10 ),
+                new THREE.Vector4 ( -20, 20, -10, 10 )
+            ],
+            [
+                new THREE.Vector4 ( 0, -20, 0, 10 ),
+                new THREE.Vector4 ( 0, -10, -10, 5 ),
+                new THREE.Vector4 ( 0, 10, 15, 5 ),
+                new THREE.Vector4 ( 0, 20, 0, 10 )
+            ],
+            [
+                new THREE.Vector4 ( 20, -20, -10, 10 ),
+                new THREE.Vector4 ( 20, -10, 20, 10 ),
+                new THREE.Vector4 ( 20, 10, -25, 10 ),
+                new THREE.Vector4 ( 20, 20, 10, 10 )
+            ]
+        ];
+
+        var degree1 = 2;
+        var degree2 = 3;
+        var knots1 = [ 0, 0, 0, 1, 1, 1 ];
+        var knots2 = [ 0, 0, 0, 0, 1, 1, 1, 1 ];
+        var nurbsSurface = new NURBSSurface( degree1, degree2, knots1, knots2, nsControlPoints );
+    
+        function getSurfacePoint( u, v, target ) {
+    
+            return nurbsSurface.getPoint( u, v, target );
+    
         }
+    
+        var geometry = new THREE.ParametricBufferGeometry( getSurfacePoint, 20, 20 );
 
         return geometry;
     }
@@ -41,13 +65,7 @@ export default scene => {
         const angle = time*speed;
 
         group.rotation.y = angle;
-
         subjectMaterial.alphaMap.offset.y = 0.55 + time * textureOffsetSpeed;
-
-        subjectWireframe.material.color.setHSL( Math.sin(angle*2), 0.5, 0.5 );
-        
-        const scale = (Math.sin(angle*8)+6.4)/5;
-        subjectWireframe.scale.set(scale, scale, scale)
     }
 
     return {
